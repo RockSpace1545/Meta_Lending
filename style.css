@@ -1,0 +1,389 @@
+html {
+    scroll-behavior: smooth;
+    /* плавний скрол */
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: #292929;
+    font-size: 16px;
+    line-height: 140%;
+}
+
+.header {
+    display: flex;
+    /* display: none; */
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    height: 100vh;
+    padding: 64px 120px;
+    background-image: url(./images/header-bg/Headphones-image-1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header__top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__title {
+    margin-top: 40px;
+    margin-bottom: 0;
+    font-size: 48px;
+    line-height: 100%;
+    font-style: italic;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: transform 500ms;
+    box-sizing: border-box;
+    height: 100vh;
+    padding: 64px 120px;
+    background-color: #E8EFF9;
+}
+
+.menu:target {
+    /* таргет працює з ід, якщо зараз буде той ід, який має таргет, то він буде відображатися */
+    transform: translateX(0%);
+}
+
+.menu__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 64px;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.nav__link {
+    color: #292929;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 22px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.main {
+    padding: 120px;
+    background-color: white;
+}
+
+.recommended__title {
+    margin-top: 0;
+    margin-bottom: 64px;
+    font-size: 48px;
+    line-height: 100%;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: -1.5px;
+}
+
+.categories__title {
+    margin-top: 0;
+    margin-bottom: 64px;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: -1.5px;
+    text-align: center;
+}
+
+.how-to-buy__title {
+    margin-top: 120px;
+    margin-bottom: 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: -1.5px;
+    text-align: left;
+}
+
+.recommended {
+    margin-bottom: 120px;
+}
+
+.recommended__products {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.product {
+    flex-basis: 324px;
+}
+
+.product__photo {
+    width: 100%;
+    margin-bottom: 32px;
+}
+
+.product__title {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 140%;
+}
+
+.product__categories {
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.product__price {
+    margin: 0;
+    font-weight: bold;
+}
+
+.categories {
+    max-width: 1020px;
+    margin: 0 auto;
+    margin-bottom: 120px;
+}
+
+.category {
+    margin-bottom: 64px;
+}
+
+.category__photos {
+    display: flex;
+    gap: 3%;
+    margin-bottom: 16px;
+}
+
+.category__title {
+    margin: 0;
+}
+
+.photo-wide {
+    width: 65%;
+}
+
+.photo-square {
+    width: 32%;
+}
+
+.how-to-buy {
+    display: flex;
+    gap: 24px;
+    max-width: 1020px;
+    margin: 0 auto;
+}
+
+.how-to-buy__title {
+    flex-basis: 50%;
+    margin-top: 0;
+    margin-bottom: 64px;
+    font-size: 48px;
+    line-height: 100%;
+    font-weight: bold;
+    letter-spacing: -1.5px;
+}
+
+.how-to-buy__content {
+    flex-basis: 50%;
+}
+
+.how-to-buy__benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.footer {
+    position: sticky;
+    bottom: 0;
+    z-index: -1;
+    background-image: url(./images/footer-bg/footer-bg.png);
+    height: 460px;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media only screen and (max-width: 770px) {
+    .header {
+        width: 100vw;
+        padding: 64px 120px;
+        background-image: url('./images/header-bg/header-bg-1.png');
+    }
+
+    .recommended__products {
+        flex-direction: column;
+    }
+
+    .product {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .product__title {
+        font-size: 24px;
+    }
+
+    .product__categories {
+        font-size: 24px;
+    }
+
+    .product__price {
+        font-size: 24px;
+    }
+
+    .category__title {
+        font-size: 24px;
+    }
+
+    .how-to-buy__benefits li {
+        font-size: 22px;
+    }
+
+    .how-to-buy__description {
+        font-size: 22px;
+        text-align: justify;
+    }
+
+    .footer {
+        height: 400px;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .header {
+        padding: 40px 40px;
+        background-image: url('./images/header-bg/header-bg.png');
+    }
+
+    .header__top__img {
+        width: 127px;
+        height: 16px;
+    }
+
+    .header__bottom__img {
+        width: 32px;
+        height: 38px;
+    }
+
+    .header__title {
+        margin-top: 20px;
+        font-size: 32px;
+    }
+
+    .main {
+        padding: 40px 40px;
+    }
+
+    .recommended__title {
+        font-size: 32px;
+    }
+
+    .product__title {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .product__categories {
+        font-size: 16px;
+    }
+
+    .product__price {
+        font-size: 16px;
+    }
+
+    .category {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .categories__title {
+        font-size: 32px;
+    }
+
+    .category__title {
+        font-size: 16px;
+    }
+
+    .category__photos {
+        gap: 4%;
+        justify-content: center;
+    }
+
+    .photo-wide {
+        width: 130px;
+        height: 100px;
+    }
+
+    .photo-square {
+        width: 130px;
+        height: 100px;
+    }
+
+    .how-to-buy {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .how-to-buy__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .how-to-buy__title {
+        font-size: 32px;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    .how-to-buy__benefits li {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .how-to-buy__description {
+        font-size: 16px;
+    }
+
+    .footer {
+        height: 200px;
+    }
+
+    .menu {
+        padding: 40px 40px;
+    }
+
+    .menu__top__img {
+        width: 127px;
+        height: 16px;
+    }
+
+    .nav__link {
+        font-size: 22px;
+    }
+}
